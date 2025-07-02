@@ -118,18 +118,6 @@ const Product = () => {
                   </p>
                 </div>
 
-                {/* <ul className="space-y-3">
-                  {product.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-slate-600"
-                    >
-                      <CheckCircle2 className="w-4 h-4 mr-2 text-violet-600" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul> */}
-
                 <div className="pt-6 border-t border-slate-100">
                   <button 
                     onClick={() => handleModalOpen(product)}
