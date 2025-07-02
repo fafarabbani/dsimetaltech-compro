@@ -2,97 +2,141 @@ import React, { useState } from "react";
 import { ExternalLink, ArrowUpRight, Code } from "lucide-react";
 import LazyImage from "./LazyImage";
 
+import cowImage from '../assets/product/louver/Cow.png';
+import mediumImage from '../assets/product/louver/Medium.png';
+import largeImage from '../assets/product/louver/Large.png';
+import zincImage from '../assets/product/zinc/350.png';
+import spandekImage from '../assets/product/spandek/spandek.png';
+
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
   const categories = 
   [
     "All",
-    "[Posmac] Ladder Tray",
-    "[Aluminium] Ladder Tray",
-    "[Hot-Dip Galzanized] Cable Duct",
-    "[Galzanized Iron] Cable Duct",
-    "[Hot-Dip Galzanized] Ladder Tray",
-    "[Powder Coated] Cable Duct",
-    "Accessories",
+    "Louver Steel Panel",
+    "Zinc Steel Panel",
+    "Spandek Steel Panel",
+    "Cable Tray",
+    "Interior Epoxy",
+    "Resin Epoxy",
   ];
 
   const projects = [
+    // Louver
     {
-      title: "Enterprise E-commerce",
-      description: "AI-powered shopping platform with real-time analytics",
-      image: "/src/assets/logo.jpg",
-      category: "[Posmac] Ladder Tray",
-      technologies: ["React", "Node.js", "AWS"],
-      metrics: [
-        { label: "Conversion", value: "+45%" },
-        { label: "Performance", value: "99.9%" },
+      title: "Cow Bone",
+      description: "Our Louvered Steel Plate is crafted exclusively from 100% high-quality Korean materials, provides reliable, long-lasting protection and efficiency, standing out as a superior choice in the market.",
+      image: cowImage,
+      category: "Louver Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.51 m/m" },
+        { label: "Coil Width", value: "610 MM" },
+        { label: "Product Thx", value: "17.5 T" },
+      ],
+      limits: [
+        { label: "Width", value: "345 mm" },
+        { label: "Length", value: "900 mm" },
+        { label: "Corner", value: "Var" },
       ],
     },
     {
-      title: "FinTech Mobile App",
-      description: "Next-gen banking with biometric authentication",
-      image: "/src/assets/logo.jpg",
-      category: "[Aluminium] Ladder Tray",
-      technologies: ["React Native", "Firebase"],
-      metrics: [
-        { label: "App Rating", value: "4.9" },
-        { label: "Daily Users", value: "50K+" },
+      title: "Medium Bone",
+      description: "Our Louvered Steel Plate is crafted exclusively from 100% high-quality Korean materials, provides reliable, long-lasting protection and efficiency, standing out as a superior choice in the market.",
+      image: mediumImage,
+      category: "Louver Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.51 m/m" },
+        { label: "Coil Width", value: "610 MM" },
+        { label: "Product Thx", value: "17.5 T" },
+      ],
+      limits: [
+        { label: "Width", value: "345 mm" },
+        { label: "Length", value: "900 mm" },
+        { label: "Corner", value: "Var" },
       ],
     },
     {
-      title: "Cloud Migration",
-      description: "Large-scale infrastructure transformation",
-      image: "/src/assets/logo.jpg",
-      category: "[Hot-Dip Galzanized] Cable Duct",
-      technologies: ["AWS", "Kubernetes"],
-      metrics: [
-        { label: "Cost Saving", value: "60%" },
-        { label: "Uptime", value: "99.99%" },
+      title: "Large Bone",
+      description: "Our Louvered Steel Plate is crafted exclusively from 100% high-quality Korean materials, provides reliable, long-lasting protection and efficiency, standing out as a superior choice in the market.",
+      image: largeImage,
+      category: "Louver Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.51 m/m" },
+        { label: "Coil Width", value: "610 MM" },
+        { label: "Product Thx", value: "17.5 T" },
+      ],
+      limits: [
+        { label: "Width", value: "355 mm" },
+        { label: "Length", value: "900 mm" },
+        { label: "Corner", value: "Var" },
+      ],
+    },
+    // Zinc
+    {
+      title: "370 Width",
+      description: "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
+      image: zincImage,
+      category: "Zinc Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.51 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
       ],
     },
     {
-      title: "Enterprise E-commerce",
-      description: "AI-powered shopping platform with real-time analytics",
-      image: "/src/assets/logo.jpg",
-      category: "[Galzanized Iron] Cable Duct",
-      technologies: ["React", "Node.js", "AWS"],
-      metrics: [
-        { label: "Conversion", value: "+45%" },
-        { label: "Performance", value: "99.9%" },
+      title: "450 Width",
+      description: "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
+      image: zincImage,
+      category: "Zinc Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.51 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "476.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
       ],
     },
+    // Spandek
     {
-      title: "FinTech Mobile App",
-      description: "Next-gen banking with biometric authentication",
-      image: "/src/assets/logo.jpg",
-      category: "[Hot-Dip Galzanized] Ladder Tray",
-      technologies: ["React Native", "Firebase"],
-      metrics: [
-        { label: "App Rating", value: "4.9" },
-        { label: "Daily Users", value: "50K+" },
+      title: "Spandek",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: spandekImage,
+      category: "Spandek Steel Panel",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
       ],
     },
+    // Cable Tray
     {
-      title: "Cloud Migration",
-      description: "Large-scale infrastructure transformation",
-      image: "/src/assets/logo.jpg",
-      category: "[Powder Coated] Cable Duct",
-      technologies: ["AWS", "Kubernetes"],
-      metrics: [
-        { label: "Cost Saving", value: "60%" },
-        { label: "Uptime", value: "99.99%" },
+      title: "Spandek",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: spandekImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
       ],
-    },
-    {
-      title: "Cloud Migration",
-      description: "Large-scale infrastructure transformation",
-      image: "/src/assets/logo.jpg",
-      category: "Accessories",
-      technologies: ["AWS", "Kubernetes"],
-      metrics: [
-        { label: "Cost Saving", value: "60%" },
-        { label: "Uptime", value: "99.99%" },
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
       ],
     },
   ];
@@ -136,8 +180,9 @@ const Portfolio = () => {
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === category
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 
+                ${ 
+                  activeFilter === category
                   ? "bg-violet-600 text-white shadow-lg shadow-violet-500/25"
                   : "bg-white text-slate-600 hover:bg-slate-50"
               }`}
@@ -169,13 +214,13 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                       <div className="flex items-center gap-4">
-                        {project.metrics.map((metric, idx) => (
+                        {project.details.map((detail, idx) => (
                           <div key={idx} className="text-white">
                             <div className="text-sm opacity-75">
-                              {metric.label}
+                              {detail.label}
                             </div>
                             <div className="text-lg font-bold">
-                              {metric.value}
+                              {detail.value}
                             </div>
                           </div>
                         ))}
@@ -195,20 +240,21 @@ const Portfolio = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">{project.description}</p>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gray-50 text-sm text-gray-600"
-                      >
-                        <Code size={14} />
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  {/* Limits */}
+                  <div className="flex items-center gap-4 mb-5">
+                      {project.limits.map((limit, idx) => (
+                        <div key={idx} className="text-gray-600">
+                          <div className="text-sm opacity-75">
+                            {limit.label}
+                          </div>
+                          <div className="text-base font-bold">
+                            {limit.value}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
 
                   <button className="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium group">
                     View Details

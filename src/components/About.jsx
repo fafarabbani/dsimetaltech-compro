@@ -58,13 +58,17 @@ const About = () => {
             </span>
           </h2>
 
-          <p className="mt-6 text-xl text-slate-600 leading-relaxed text-justify">
-            At PT DSI Metal Technology, we specialize in importing and supplying 100% Korean materials for high-quality construction and industrial applications. With a commitment to excellence, durability, and innovation, we collaborate with leading Korean manufacturers to bring specialty building materials to the global market.
-            <br/>
-            As an ISO 9001, 45001, and 14001 certified company, we ensure the highest standards in quality, safety, and environmental responsibility. Our product range includes steel roofing systems, perforated steel plates, cable trays, systems, epoxy resins, designed for superior performance and long-term reliability.
-            <br/>
-            Driven by a customer-first approach, PT DSI Metal Technology provides customized solutions for industrial, commercial, and residential projects. Whether for large-scale infrastructure or specialty applications, our materials are trusted by architects, builders, and developers worldwide.
-          </p>
+          <div className="mt-6 text-xl text-slate-600 leading-relaxed text-justify">
+            <p>
+              PT. DSI Metal Technology Batam Indonesia strives to be a "Global Company with the Highest Quality". To achieve this, we will continue to strive to be trusted and provide real added value to our customers' businesses.
+            </p>
+            <p className="my-2">
+              The main goal of PT DSI Metal Technology is to achieve consistent business growth and profitability. We achieve this by developing quality products to our clients, utilizing the latest technological advances.
+            </p>
+            <p>
+              The company primarily focuses on providing professional services in the fields of industrial plants, shipyards, marine and land services.
+            </p>
+          </div>
         </div>
 
         {/* Feature cards */}
