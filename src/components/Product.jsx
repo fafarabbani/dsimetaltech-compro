@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalProduct from "./ModalProduct";
+import { Link } from 'react-router-dom';
 import louverImage from '../assets/Louver.PNG';
 import zincImage from '../assets/Zinc.PNG';
 import spandekImage from '../assets/Spandek.PNG';
@@ -8,17 +8,11 @@ import interiorImage from '../assets/Interior.PNG';
 import resinImage from '../assets/Resin.PNG';
 
 import {
-  Monitor,
-  Smartphone,
-  Cloud,
-  Shield,
   ArrowUpRight,
-  CheckCircle2,
 } from "lucide-react";
 
 const Product = () => {
 
-  const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const product = [
@@ -28,6 +22,7 @@ const Product = () => {
         "Our Louvered Steel Plate is crafted exclusively from 100% high-quality Korean materials, provides reliable, long-lasting protection and efficiency, standing out as a superior choice in the market.",
       image: louverImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
     {
       title: "Zinc Steel Panel",
@@ -35,6 +30,7 @@ const Product = () => {
         "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
       image: zincImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
     {
       title: "Spandek Steel Panel",
@@ -42,6 +38,7 @@ const Product = () => {
         "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
       image: spandekImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
     {
       title: "Cable Tray",
@@ -49,6 +46,7 @@ const Product = () => {
         "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
       image: cableImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
     {
       title: "Interior Epoxy",
@@ -56,6 +54,7 @@ const Product = () => {
         "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
       image: interiorImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
     {
       title: "Resin Epoxy",
@@ -63,12 +62,12 @@ const Product = () => {
         "Our Zinc Steel Panel is made from 100% premium Korean materials, offering exceptional strength and durability. Its flexible design ensures easy installation and adaptability for various projects.",
       image: resinImage,
       features: ["Cloud Integration", "Scalable Architecture", "24/7 Support"],
+      link: "/product", 
     },
   ];
 
   const handleModalOpen = (product) => {
     setSelectedProduct(product);
-    setModalOpen(true);
   };
 
   return (
@@ -120,9 +119,10 @@ const Product = () => {
 
                 <div className="pt-6 border-t border-slate-100">
                   <button 
-                    onClick={() => handleModalOpen(product)}
                     className={`group inline-flex items-center text-sm font-medium text-slate-900 hover:text-[#0000ff] transition-colors`}>
-                    Learn more
+                        <Link to={product.link}>
+                          View Details
+                        </Link>
                     <ArrowUpRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>
                 </div>
@@ -131,14 +131,6 @@ const Product = () => {
           ))}
         </div>
       </div>
-            {/* Modal */}
-      {modalOpen && selectedProduct && (
-        <ModalProduct 
-          modalOpen={modalOpen}
-          setModalOpen={setModalOpen}
-          product={selectedProduct}
-        />
-      )}
     </section>
   )
 }

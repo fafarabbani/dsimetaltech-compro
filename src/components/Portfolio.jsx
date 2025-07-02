@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import { ExternalLink, ArrowUpRight, Code } from "lucide-react";
 import LazyImage from "./LazyImage";
 
-import cowImage from '../assets/product/louver/Cow.png';
+import cowImage from '../assets/product/louver/Cow.PNG';
 import mediumImage from '../assets/product/louver/Medium.png';
 import largeImage from '../assets/product/louver/Large.png';
-import zincImage from '../assets/product/zinc/350.png';
+import zincImage from '../assets/product/zinc/350.PNG';
 import spandekImage from '../assets/product/spandek/spandek.png';
+import accessoriessImage from '../assets/product/cable/accessories.PNG';
+import aluminiumImage from '../assets/product/cable/aluminium.png';
+import giCableImage from '../assets/product/cable/gi-cable-duct.PNG';
+import hdgCableImage from '../assets/product/cable/hdg-cable-duct.PNG';
+import hdgLadderImage from '../assets/product/cable/hdg-ladder-tray.PNG';
+import pcCableImage from '../assets/product/cable/pc-cable-duct.PNG';
+import posmacImage from '../assets/product/cable/posmac.png';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -72,6 +79,7 @@ const Portfolio = () => {
         { label: "Corner", value: "Var" },
       ],
     },
+
     // Zinc
     {
       title: "370 Width",
@@ -105,6 +113,7 @@ const Portfolio = () => {
         { label: "Corner", value: "Lock" },
       ],
     },
+
     // Spandek
     {
       title: "Spandek",
@@ -122,12 +131,145 @@ const Portfolio = () => {
         { label: "Corner", value: "Lock" },
       ],
     },
+
     // Cable Tray
+    {
+      title: "Posmac Ladder Tray",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: posmacImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Aluminium Ladder Tray",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: aluminiumImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Hot-Dip Galvanized Cable Duct",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: hdgCableImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Galvanized Iron Cable Duct",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: giCableImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Hot-Dip Galvanized Ladder Tray",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: hdgLadderImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Powder Coated Cable Duct",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: pcCableImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+    {
+      title: "Accessories",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: accessoriessImage,
+      category: "Cable Tray",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+
+    // Interior Epoxy
     {
       title: "Spandek",
       description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
       image: spandekImage,
-      category: "Cable Tray",
+      category: "Interior Epoxy",
+      details: [
+        { label: "Thickness", value: "0.4 m/m" },
+        { label: "Coil Width", value: "530 MM" },
+        { label: "Product Thx", value: "38 T" },
+      ],
+      limits: [
+        { label: "Width", value: "396.5 mm" },
+        { label: "Length", value: "min 900 mm" },
+        { label: "Corner", value: "Lock" },
+      ],
+    },
+
+    // Resin Epoxy
+    {
+      title: "Spandek",
+      description: "Our Rooff Steel / Spandek, has three to six times better corrosion resistance compared to other zinc coated (galvanized) steel sheet of the same coating thickness. We issues a 25 year warranty for Roof Steel in case of residential applications.",
+      image: spandekImage,
+      category: "Resin Epoxy",
       details: [
         { label: "Thickness", value: "0.4 m/m" },
         { label: "Coil Width", value: "530 MM" },
