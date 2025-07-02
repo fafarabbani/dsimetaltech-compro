@@ -47,6 +47,7 @@ const HomePage = () => (
     <About />
     <Portfolio />
     <Contact />
+    
   </>
 );
 
